@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt->execute()) {
             // Pengalihan setelah berhasil
-            echo "<script>alert('Pendaftaran berhasil! Terima kasih telah mendaftar.'); window.location.href='index.php';</script>";
+            header("Location: success.php");
             exit();
         } else {
             echo "Error: " . $stmt->error;
